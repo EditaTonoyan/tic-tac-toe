@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/config.js"defer></script>
+    <script src="./js/game.js" defer></script>
+    <script src="./js/app.js" defer></script>
+    <link rel="stylesheet" href="./css/global.css">
+
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <div class="backdrop"></div>
+    <header class="main_header">
+        <h1>Play Tic, Tac, Toe</h1>
+        <p>Built with HTML, CSS javascript and - of course - lots of love</p>
+    </header>
+
+    <main>
+        <div class="modal">
+            <h2 class="modal_header">Choose your name</h2>
+            <form class="modal__form">
+                <div class="modal__form_item">
+                    <label for="playerName">Player Name</label>
+                    <input type="text"  id="playerName" name="userName" required>
+                </div>
+                <p class="config_errors"></p>
+                <div>
+                    <button type="reset" class="button alt_button" id="cancel-button"> Cancel</button>
+                    <button type="submit" class="button" id="confirm-button"> Confirm</button>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="game__configuration">
+            <div class="game__configuration_list">
+
+                <div id="player-1-data" class="game__configuration_list_item">
+                    <h2 class="game__configuration_item"> Player 1</h2>
+                    <h3 class="game__configuration_item">Player Name</h3>
+                    <p class="game__configuration_item">X</p>
+                    <button 
+                        class="button alt_button" 
+                        id="edit-player-first-btn" 
+                        data-playerid="1"
+                    >
+                    Edit
+                </button>
+
+                </div>
+                <div id="player-2-data" class="game__configuration_list_item">
+                    <h2 class="game__configuration_item"> Player 2</h2>
+                    <h3  class="game__configuration_item">Player Name 2</h3>
+                    <p class="game__configuration_item">X</p>
+                    <button
+                        class="button alt_button"
+                        id="edit-player-second-btn"
+                        data-playerid="2"
+                      >
+                      Edit
+                    </button>
+                </div>
+            </div>
+            <button class="button" id="start-game-button">Start New Game</button>
+        </div>
+
+        <div class="active__game">
+            <div class="active__game_over">
+                <h2 class="active__game_over_item">You Won, <span class="winner_name"> Player Name</span>! </h2>
+                <p class="active__game_over_item">Clich "start new game" above, to start a new game!</p>
+            </div>
+            <p>It's your turn <span class="active_player_name">Player Name</span>! </p>
+            
+            <div class="active__game_list">
+                <div class="active__game_list_items">
+                        <div class="active__game_list_items_item"></div>
+                        <div class="active__game_list_items_item"></div>
+                        <div class="active__game_list_items_item"></div>
+                        <div class="active__game_list_items_item"></div>
+                        <div class="active__game_list_items_item"></div>
+                        <div class="active__game_list_items_item"></div>
+                        <div class="active__game_list_items_item"></div>
+                        <div class="active__game_list_items_item"></div>
+                        <div class="active__game_list_items_item"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
